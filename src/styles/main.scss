@@ -1,0 +1,45 @@
+@use "var";
+@use "font";
+
+* {
+  margin: 0;
+}
+body {
+  background-image: url(../IMG/bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  font-family: font.$font-family-montserrat;
+  color: var.$white;
+  &__logo {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 143%;
+  }
+  &__container{
+    display: flex;
+
+  }
+  &__label{
+    padding-right: 12px;
+  }
+  &__address {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+  }
+  &__phone {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 152%;
+  }
+  &__schedule {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 150%;
+  }
+}
