@@ -8,67 +8,28 @@ button {
   border: none;
 }
 body {
-  padding: 37px 370px 80px;
+  margin: 0;
+  padding: 0;
+  // display: flex;
+  // flex-direction: column;
 }
 
-.background__img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
-}
-.header {
+.container {
+  // max-width: 1920px;       
+  width: 100%;             
+  margin: 0 auto;      
   display: flex;
-  align-items: center;
-  font-family: font.$font-family-montserrat;
-  color: var.$white;
-  &__logo {
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 143%;
-    margin-right: 551px;
-    padding-top: 2px;
-    white-space: nowrap;
-  }
-  &__address {
-    display: flex;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-    padding-top: 4px;
-    margin-right: 71px;
-    white-space: nowrap;
-    &_label {
-      padding-right: 12px;
-      white-space: nowrap;
-    }
-  }
-  &__phone {
-    display: flex;
-    gap: 14px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 152%;
-    &_text {
-      white-space: nowrap;
-    }
-    &_icon {
-      position: relative;
-      left: 1px;
-      top: -7px;
-    }
-    &_schedule {
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 150%;
-    }
-  }
+  justify-content: center; 
+  align-items: start;
 }
 
 .first-screen {
-  margin-top: 220px;
+  height: 100vh;
+
+  background-image: url(../IMG/bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  // margin-top: 220px;
   &__h2 {
     display: inline-block;
     border-radius: 5px;
@@ -127,6 +88,55 @@ body {
     }
   }
 }
+.header {
+  display: flex;
+  align-items: center;
+  font-family: font.$font-family-montserrat;
+  color: var.$white;
+  &__logo {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 143%;
+    // margin-right: 551px;
+    padding-top: 2px;
+    white-space: nowrap;
+  }
+  &__address {
+    display: flex;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    padding-top: 4px;
+    // margin-right: 71px;
+    white-space: nowrap;
+    &_label {
+      // padding-right: 12px;
+      white-space: nowrap;
+    }
+  }
+  &__phone {
+    display: flex;
+    gap: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 152%;
+    &_text {
+      white-space: nowrap;
+    }
+    &_icon {
+      position: relative;
+      left: 1px;
+      top: -7px;
+    }
+    &_schedule {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 150%;
+    }
+  }
+}
+
+
 
 .product-catalog {
   margin-top: 466px;
@@ -145,10 +155,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
     .grid__element {
       font-family: font.$font-family-montserrat;
       &__container {
-        padding: 44px 44px 50px;
+        padding: 44px 89px 50px 44px;
       }
       &__h4 {
         font-weight: 700;
