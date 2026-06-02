@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  margin: 0 370px;
+  margin: 0 clamp(30px, -48.46px + 21.79vw, 370px); //0 370px;
 }
 
 .first-screen {
@@ -24,6 +24,55 @@ body {
     width: 100%;
     object-fit: contain;
     z-index: -1;
+  }
+  .header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    font-family: font.$font-family-montserrat;
+    color: var.$white;
+    padding-top: 37px;
+    &__logo {
+      font-weight: 500;
+      font-size: 21px;
+      line-height: 143%;
+      margin-right: clamp(20px, -102.31px + 33.97vw, 550px); //551px;
+      padding-top: 2px;
+      white-space: nowrap;
+    }
+    &__address {
+      display: flex;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 150%;
+      padding-top: 4px;
+      margin-right: clamp(20px, 8.46px + 3.21vw, 70px); //71px;
+      white-space: nowrap;
+      &_label {
+        padding-right: 12px;
+        white-space: nowrap;
+      }
+    }
+    &__phone {
+      display: flex;
+      gap: 14px;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 152%;
+      &_text {
+        white-space: nowrap;
+      }
+      &_icon {
+        position: relative;
+        left: 1px;
+        top: -7px;
+      }
+      &_schedule {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 150%;
+      }
+    }
   }
   &__h2 {
     display: inline-block;
@@ -84,59 +133,10 @@ body {
     }
   }
 }
-.header {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: font.$font-family-montserrat;
-  color: var.$white;
-  padding-top: 37px;
-  &__logo {
-    font-weight: 500;
-    font-size: 21px;
-    line-height: 143%;
-    margin-right: clamp(20px, -102.31px + 33.97vw, 550px); //551px;
-    padding-top: 2px;
-    white-space: nowrap;
-  }
-  &__address {
-    display: flex;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-    padding-top: 4px;
-    margin-right: clamp(20px, 8.46px + 3.21vw, 70px); //71px;
-    white-space: nowrap;
-    &_label {
-      padding-right: 12px;
-      white-space: nowrap;
-    }
-  }
-  &__phone {
-    display: flex;
-    gap: 14px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 152%;
-    &_text {
-      white-space: nowrap;
-    }
-    &_icon {
-      position: relative;
-      left: 1px;
-      top: -7px;
-    }
-    &_schedule {
-      font-weight: 400;
-      font-size: 13px;
-      line-height: 150%;
-    }
-  }
-}
+
 
 .product-catalog {
-  margin-top: 466px;
+  margin-top: 345px;
   background-color: var.$white;
   &__h3 {
     font-family: font.$font-family-montserrat;
